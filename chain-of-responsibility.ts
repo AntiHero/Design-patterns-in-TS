@@ -25,7 +25,7 @@ class ConcreteHandler1 extends AbstractHandler {
       return 'foo!';
     }
 
-    return this.nextHandler!.handle(request);
+    return this.nextHandler?.handle(request) ?? null;
   }
 }
 
@@ -37,7 +37,7 @@ class ConcreteHandler2 extends AbstractHandler {
       return 'bar!';
     }
 
-    return this.nextHandler!.handle(request);
+    return this.nextHandler?.handle(request) ?? null;
   }
 }
 
